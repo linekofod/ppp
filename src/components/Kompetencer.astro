@@ -1,0 +1,30 @@
+---
+import "../styles/generel.css";
+const { title, dot1, dot2, dot3, dot4, dot5 } = Astro.props;
+---
+
+<div>
+  <h2 class="mb-2 text-[#FCF0D7]">{title}</h2>
+  <div class="flex flex-row gap-6">
+    <span class={dot1}></span>
+    <span class={dot2}></span>
+    <span class={dot3}></span>
+    <span class={dot4}></span>
+    <span class={dot5}></span>
+  </div>
+</div>
+
+<style>
+  span {
+    height: 30px;
+    width: 30px;
+    background-color: none;
+    border-radius: 50%;
+    border: 1px solid var(--gul);
+    display: inline-block;
+  }
+
+  .isFilled {
+    background-color: var(--gul);
+  }
+</style>

@@ -1,0 +1,71 @@
+/* Generel styling */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --brun: #252423;
+    --grn: #424530;
+    --grn-30: #4245304D;
+    --gul: #FCF0D7;
+}
+
+h1 {
+    font-family: "cormorant-unicase", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: "cormorant", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "cormorant", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+}
+
+p {
+    font-family: "cormorant", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    max-width: 75ch;
+}
+
+h1, h2, h3, p {
+    color: #252423;
+}
+
+
+/* Desktop version */
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 22px;
+    }
+}

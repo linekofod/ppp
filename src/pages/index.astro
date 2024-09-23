@@ -1,16 +1,133 @@
 ---
-
+import "../styles/generel.css";
+import MainLayout from "../layouts/MainLayout.astro";
+import Kompetencer from "../components/Kompetencer.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<MainLayout title="Line Kofod Thomsen">
+  <h1 class="mx-20 my-5">Line Kofod Thomsen</h1>
+
+  <!-- Hero -->
+  <section class="grid grid-cols-2 gap-12 items-center mx-20 mb-20">
+    <img
+      class="shadow-[-30px_30px_12px_#4245304D]"
+      src="/imgs/line1.webp"
+      alt="Portrætfoto af Line Kofod Thomsen"
+    />
+    <div>
+      <h2 class="mb-5">Kreativ og detaljeorienteret</h2>
+      <h3 class="mb-3">Multimediedesign studerende</h3>
+      <div class="flex flex-col gap-4">
+        <p>
+          Mit navn er Line og jeg er 24 år gammel. Jeg er en smilende og nede på
+          jorden pige, der elsker design og kode. Som digital designer er jeg
+          struktureret og detaljeorienteret, hvilket er med til at sikre, at mit
+          arbejde ikke kun er visuelt tiltalende, men også funktionelt og
+          brugervenligt.
+        </p>
+        <p>
+          Jeg har en hurtig indlæringsevne, og elsker at fordybe mig i tekniske
+          og kreative programmer som Figma, Illustrator og VSCode. Når jeg
+          arbejder i programmerne lægger jeg stor vægt på at finpudse og
+          optimere mine designs, samt at have et struktureret arbejdsrum, så jeg
+          aldrig mister overblik.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kompetencter -->
+  <section class="bg-[#424530] py-20 flex flex-row justify-around mb-20">
+    <Kompetencer
+      title="Vs Code"
+      dot1="isFilled"
+      dot2="isFilled"
+      dot3="isFilled"
+      dot4="isFilled"
+    />
+    <Kompetencer
+      title="Figma"
+      dot1="isFilled"
+      dot2="isFilled"
+      dot3="isFilled"
+      dot4="isFilled"
+    />
+    <Kompetencer title="Illustrator" dot1="isFilled" dot2="isFilled" />
+    <Kompetencer title="Photoshop" dot1="isFilled" dot2="isFilled" />
+  </section>
+
+  <!-- Studiejob -->
+  <section class="grid grid-cols-2 gap-12 items-center mx-20 mb-20">
+    <div>
+      <div class="mb-10">
+        <h2 class="mb-3">Studiejob</h2>
+        <div class="flex flex-col gap-4">
+          <p>
+            På 1. semester var jeg så heldig at få et studiejob som
+            studentermedhjælper i virksomheden VOCAST, i et team med digitale
+            designere.
+          </p>
+          <p>
+            VOCAST er en platform, hvor fashion, design og lifestyle brands får
+            hjælp til at dele deres filer og billedmateriale ud til forhandlere,
+            presse og andre interesserede, blandt andet igennem et digitalt
+            showroom, som vi skræddersyr til deres brand.
+          </p>
+        </div>
+      </div>
+      <div>
+        <h2 class="mb-3">Find mig her</h2>
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/line.k.thomsen/"
+          target="_blank"
+          class="flex flex-row gap-2 items-center mb-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="37"
+            viewBox="0 0 32 37"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_222_72)">
+              <path
+                d="M16.0071 9.96199C11.4643 9.96199 7.79998 13.5864 7.79998 18.0799C7.79998 22.5734 11.4643 26.1979 16.0071 26.1979C20.55 26.1979 24.2143 22.5734 24.2143 18.0799C24.2143 13.5864 20.55 9.96199 16.0071 9.96199ZM16.0071 23.3576C13.0714 23.3576 10.6714 20.9908 10.6714 18.0799C10.6714 15.1691 13.0643 12.8022 16.0071 12.8022C18.95 12.8022 21.3428 15.1691 21.3428 18.0799C21.3428 20.9908 18.9428 23.3576 16.0071 23.3576ZM26.4643 9.62992C26.4643 10.6826 25.6071 11.5234 24.55 11.5234C23.4857 11.5234 22.6357 10.6756 22.6357 9.62992C22.6357 8.58427 23.4928 7.73644 24.55 7.73644C25.6071 7.73644 26.4643 8.58427 26.4643 9.62992ZM31.9 11.5517C31.7786 9.01525 31.1928 6.76851 29.3143 4.91742C27.4428 3.06633 25.1714 2.48699 22.6071 2.35981C19.9643 2.21144 12.0428 2.21144 9.39999 2.35981C6.84284 2.47992 4.57141 3.05927 2.69284 4.91036C0.814272 6.76144 0.2357 9.00818 0.107129 11.5446C-0.0428711 14.1587 -0.0428711 21.994 0.107129 24.6082C0.228557 27.1446 0.814272 29.3913 2.69284 31.2424C4.57141 33.0935 6.8357 33.6729 9.39999 33.8C12.0428 33.9484 19.9643 33.9484 22.6071 33.8C25.1714 33.6799 27.4428 33.1006 29.3143 31.2424C31.1857 29.3913 31.7714 27.1446 31.9 24.6082C32.05 21.994 32.05 14.1658 31.9 11.5517ZM28.4857 27.4131C27.9286 28.7979 26.85 29.8647 25.4428 30.4229C23.3357 31.2495 18.3357 31.0587 16.0071 31.0587C13.6786 31.0587 8.67141 31.2424 6.57141 30.4229C5.17141 29.8718 4.09284 28.8049 3.52856 27.4131C2.69284 25.3288 2.8857 20.3832 2.8857 18.0799C2.8857 15.7767 2.69999 10.8239 3.52856 8.74677C4.0857 7.36199 5.16427 6.29514 6.57141 5.73699C8.67856 4.91036 13.6786 5.10112 16.0071 5.10112C18.3357 5.10112 23.3428 4.91742 25.4428 5.73699C26.8428 6.28807 27.9214 7.35492 28.4857 8.74677C29.3214 10.831 29.1286 15.7767 29.1286 18.0799C29.1286 20.3832 29.3214 25.3359 28.4857 27.4131Z"
+                fill="#252423"></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_222_72">
+                <rect width="32" height="36.1739" fill="white"></rect>
+              </clipPath>
+            </defs>
+          </svg>
+          <p class="text-3xl">Instagram</p>
+        </a>
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/line-kofod-thomsen-87408828a/"
+          target="_blank"
+          class="flex flex-row gap-2 items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="37"
+            viewBox="0 0 32 37"
+            fill="none"
+          >
+            <path
+              d="M29.7143 2.45972H2.27857C1.02143 2.45972 0 3.49543 0 4.76686V32.1526C0 33.424 1.02143 34.4597 2.27857 34.4597H29.7143C30.9714 34.4597 32 33.424 32 32.1526V4.76686C32 3.49543 30.9714 2.45972 29.7143 2.45972ZM9.67143 29.8883H4.92857V14.6169H9.67857V29.8883H9.67143ZM7.3 12.5311C5.77857 12.5311 4.55 11.2954 4.55 9.78115C4.55 8.26686 5.77857 7.03115 7.3 7.03115C8.81429 7.03115 10.05 8.26686 10.05 9.78115C10.05 11.3026 8.82143 12.5311 7.3 12.5311ZM27.45 29.8883H22.7071V22.4597C22.7071 20.6883 22.6714 18.4097 20.2429 18.4097C17.7714 18.4097 17.3929 20.3383 17.3929 22.3311V29.8883H12.65V14.6169H17.2V16.7026H17.2643C17.9 15.5026 19.45 14.2383 21.7571 14.2383C26.5571 14.2383 27.45 17.4026 27.45 21.5169V29.8883Z"
+              fill="#252423"></path>
+          </svg>
+          <p class="text-3xl">LinkedIn</p>
+        </a>
+      </div>
+    </div>
+    <img
+      class="shadow-[30px_30px_12px_#4245304D]"
+      src="/imgs/line2.webp"
+      alt="Portrætfoto af Line Kofod Thomsen"
+    />
+  </section>
+</MainLayout>
