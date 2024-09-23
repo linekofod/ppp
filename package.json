@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.1",
-    "astro": "^4.15.9"
+    "animate.css": "^4.1.1",
+    "astro": "^4.15.9",
+    "motion": "^10.18.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.13"

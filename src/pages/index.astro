@@ -5,12 +5,14 @@ import Kompetencer from "../components/Kompetencer.astro";
 ---
 
 <MainLayout title="Line Kofod Thomsen">
-  <h1 class="mx-20 my-5">Line Kofod Thomsen</h1>
+  <h1 class="ml-28 my-5 fadeInDown">Line Kofod Thomsen</h1>
 
   <!-- Hero -->
-  <section class="grid grid-cols-2 gap-12 items-center mx-20 mb-20">
+  <section
+    class="grid grid-cols-2 items-center justify-items-center ml-10 mr-20 mb-20"
+  >
     <img
-      class="shadow-[-30px_30px_12px_#4245304D]"
+      class="shadow-[-30px_30px_12px_#4245304D] max-w-lg"
       src="/imgs/line1.webp"
       alt="Portrætfoto af Line Kofod Thomsen"
     />
@@ -37,27 +39,31 @@ import Kompetencer from "../components/Kompetencer.astro";
   </section>
 
   <!-- Kompetencter -->
-  <section class="bg-[#424530] py-20 flex flex-row justify-around mb-20">
-    <Kompetencer
-      title="Vs Code"
-      dot1="isFilled"
-      dot2="isFilled"
-      dot3="isFilled"
-      dot4="isFilled"
-    />
-    <Kompetencer
-      title="Figma"
-      dot1="isFilled"
-      dot2="isFilled"
-      dot3="isFilled"
-      dot4="isFilled"
-    />
-    <Kompetencer title="Illustrator" dot1="isFilled" dot2="isFilled" />
-    <Kompetencer title="Photoshop" dot1="isFilled" dot2="isFilled" />
+  <section class="bg-[#424530] py-20 mb-20">
+    <div class="flex flex-row justify-around fadeInLeft">
+      <Kompetencer
+        title="Vs Code"
+        dot1="isFilled"
+        dot2="isFilled"
+        dot3="isFilled"
+        dot4="isFilled"
+      />
+      <Kompetencer
+        title="Figma"
+        dot1="isFilled"
+        dot2="isFilled"
+        dot3="isFilled"
+        dot4="isFilled"
+      />
+      <Kompetencer title="Illustrator" dot1="isFilled" dot2="isFilled" />
+      <Kompetencer title="Photoshop" dot1="isFilled" dot2="isFilled" />
+    </div>
   </section>
 
   <!-- Studiejob -->
-  <section class="grid grid-cols-2 gap-12 items-center mx-20 mb-20">
+  <section
+    class="grid grid-cols-2 items-center justify-items-center mr-10 ml-20 mb-20"
+  >
     <div>
       <div class="mb-10">
         <h2 class="mb-3">Studiejob</h2>
@@ -125,9 +131,26 @@ import Kompetencer from "../components/Kompetencer.astro";
       </div>
     </div>
     <img
-      class="shadow-[30px_30px_12px_#4245304D]"
+      class="shadow-[30px_30px_12px_#4245304D] max-w-lg"
       src="/imgs/line2.webp"
       alt="Portrætfoto af Line Kofod Thomsen"
     />
   </section>
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+
+  const inviewelement = document.querySelector(".fadeInDown");
+
+  inView(inviewelement, () => {
+    inviewelement.classList.add("animate__animated", "animate__fadeInDown");
+  });
+
+  const inviewelement2 = document.querySelector(".fadeInLeft");
+
+  inView(inviewelement2, () => {
+    inviewelement2.classList.add("animate__animated", "animate__fadeInLeft");
+    inviewelement2.style.animationDuration = "1.5s";
+  });
+</script>

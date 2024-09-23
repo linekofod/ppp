@@ -11,13 +11,6 @@ img {
     max-width: 100%;
 }
 
-:root {
-    --brun: #252423;
-    --grn: #424530;
-    --grn-30: #4245304D;
-    --gul: #FCF0D7;
-}
-
 h1 {
     font-family: "cormorant-unicase", sans-serif;
     font-weight: 700;
