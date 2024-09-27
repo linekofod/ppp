@@ -4,7 +4,7 @@ import "../styles/generel.css";
 // Henter parametrene fra Astro.props
 const { href = "#", target = "_blank", variant = "primary" } = Astro.props;
 
-const linkStyling = "text-[#252423] font-['cormorant'] text-3xl";
+const linkStyling = "text-[#252423] font-['cormorant'] text-2xl md:text-3xl";
 
 const variantClasses = {
   primary: "hover:drop-shadow",
@@ -17,14 +17,3 @@ const variantClasses = {
   class:list={[linkStyling, variantClasses[variant]]}
   class="w-fit"><slot /></a
 >
-
-<style>
-  /* .mail::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f0e0";
-    display: inline-block;
-    font-weight: 900;
-    color: #252423;
-    font-size: 40px;
-  } */
-</style>

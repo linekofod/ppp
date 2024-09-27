@@ -5,21 +5,21 @@ import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Line Kofod Thomsen">
-  <h1 class="ml-28 my-5 fadeInDown">Line Kofod Thomsen</h1>
+  <h1 class="ml-2.5 md:ml-10 lg:ml-28 my-5 fadeInDown">Line Kofod Thomsen</h1>
 
   <!-- Hero -->
   <section
-    class="grid grid-cols-2 items-center justify-items-center ml-10 mr-20 mb-20"
+    class="lg:grid grid-cols-2 gap-10 xl:gap-0 items-start xl:items-center justify-items-center ml-10 mr-10 lg:mr-20 mb-14 lg:mb-20"
   >
     <img
-      class="shadow-[-30px_30px_12px_#4245304D] max-w-lg"
+      class="shadow-[-30px_30px_12px_#4245304D] xl:max-w-lg"
       src="/imgs/line1.webp"
       alt="Portrætfoto af Line Kofod Thomsen"
     />
-    <div>
+    <div class="mt-12 lg:mt-0">
       <div class="h2">
         <h2>Kreativ og detaljeorienteret</h2>
-        <span class="gul_border"></span>
+        <span class="gul_border" id="long_h2"></span>
       </div>
       <h3 class="mb-3">Multimediedesign studerende</h3>
       <div class="flex flex-col gap-4">
@@ -42,14 +42,17 @@ import Link from "../components/Link.astro";
   </section>
 
   <!-- Færdigheder -->
-  <section class="bg-[#424530] py-20 mb-20">
-    <div class="flex flex-row justify-evenly fadeInLeft">
+  <section class="bg-[#424530] px-10 lg:px-0 py-10 md:py-20 mb-14 lg:mb-20">
+    <div
+      class="flex flex-col gap-10 lg:gap-0 md:flex-row justify-evenly fadeInLeft"
+    >
       <!-- Værktøjer -->
       <div class="flex flex-col gap-3">
         <h3 class="uppercase text-[#FCF0D7]">Værktøjer</h3>
-        <div class="flex flex-row gap-8 items-center">
+        <div class="flex flex-row gap-4 lg:gap-6 items-center">
           <!-- Figma -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="50"
             height="71"
@@ -62,6 +65,7 @@ import Link from "../components/Link.astro";
           </svg>
           <!-- Illustrator -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="71"
             height="71"
@@ -77,6 +81,7 @@ import Link from "../components/Link.astro";
           </svg>
           <!-- Photoshop -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="72"
             height="71"
@@ -95,9 +100,10 @@ import Link from "../components/Link.astro";
       <!-- Kodesprog -->
       <div class="flex flex-col gap-3">
         <h3 class="uppercase text-[#FCF0D7]">Kodesprog</h3>
-        <div class="flex flex-row gap-8 items-center">
+        <div class="flex flex-row gap-4 lg:gap-6 items-center">
           <!-- HTML -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="70"
             height="80"
@@ -110,6 +116,7 @@ import Link from "../components/Link.astro";
           </svg>
           <!-- CSS -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="70"
             height="80"
@@ -125,9 +132,10 @@ import Link from "../components/Link.astro";
       <!-- Frameworks -->
       <div class="flex flex-col gap-3">
         <h3 class="uppercase text-[#FCF0D7]">Frameworks</h3>
-        <div class="flex flex-row gap-8 items-center">
+        <div class="flex flex-row gap-4 lg:gap-6 items-center">
           <!-- Astro -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="63"
             height="78"
@@ -154,6 +162,7 @@ import Link from "../components/Link.astro";
           </svg>
           <!-- Tailwind -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="100"
             height="60"
@@ -168,6 +177,7 @@ import Link from "../components/Link.astro";
           </svg>
           <!-- Animate.css -->
           <svg
+            class="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
             xmlns="http://www.w3.org/2000/svg"
             width="81"
             height="80"
@@ -187,66 +197,86 @@ import Link from "../components/Link.astro";
   </section>
 
   <!-- Projekter -->
-  <section class="mr-10 ml-20 mb-20">
+  <section class="ml-10 mr-10 lg:mr-20 mb-14 lg:mb-20">
     <div class="h2">
       <h2>Projekter</h2>
       <span class="gul_border"></span>
     </div>
-    <div class="grid grid-cols-3 gap-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
       <!-- Studio Per Lunde Jørgensen -->
-      <a
-        href="https://nonsite.netlify.app/"
-        target="_blank"
-        class="group pointer w-full h-[222px] border border-[#424530] flex justify-center items-center hover:bg-[url('/imgs/projekter/studio_per.webp')] bg-cover bg-no-repeat"
-      >
-        <h3 class="group-hover:hidden">Studio Per Lunde Jørgensen</h3>
-      </a>
+      <div>
+        <h3 class="mb-1 xl:hidden">Studio Per Lunde Jørgensen</h3>
+        <a
+          href="https://nonsite.netlify.app/"
+          target="_blank"
+          class="group pointer w-full h-[230px] border border-[#424530] flex justify-center items-center text-center bg-[url('/imgs/projekter/studio_per.webp')] xl:bg-none xl:hover:bg-[url('/imgs/projekter/studio_per.webp')] bg-cover bg-no-repeat bg-left"
+        >
+          <h3 class="group-hover:hidden hidden xl:block">
+            Studio Per Lunde Jørgensen
+          </h3>
+        </a>
+      </div>
       <!-- I tråd med verden -->
-      <a
-        href="https://itmv-webfeature.netlify.app/"
-        target="_blank"
-        class="group pointer w-full h-[222px] border border-[#424530] flex justify-center items-center hover:bg-[url('/imgs/projekter/itmw.webp')] bg-cover bg-no-repeat"
-      >
-        <h3 class="group-hover:hidden">I tråd med verden</h3>
-      </a>
+      <div>
+        <h3 class="mb-1 xl:hidden">I tråd med verden</h3>
+        <a
+          href="https://itmv-webfeature.netlify.app/"
+          target="_blank"
+          class="group pointer w-full h-[230px] border border-[#424530] flex justify-center items-center bg-[url('/imgs/projekter/itmw.webp')] xl:bg-none hover:bg-[url('/imgs/projekter/itmw.webp')] bg-cover bg-no-repeat bg-left"
+        >
+          <h3 class="group-hover:hidden hidden xl:block">I tråd med verden</h3>
+        </a>
+      </div>
       <!-- Karrusel Festival -->
-      <a
-        href="https://karrusel-festival2.netlify.app/"
-        target="_blank"
-        class="group pointer w-full h-[222px] border border-[#424530] flex justify-center items-center hover:bg-[url('/imgs/projekter/karrusel.webp')] bg-cover bg-no-repeat"
-      >
-        <h3 class="group-hover:hidden">Karrusel Festival</h3>
-      </a>
+      <div>
+        <h3 class="mb-1 xl:hidden">Karrusel Festival</h3>
+        <a
+          href="https://karrusel-festival2.netlify.app/"
+          target="_blank"
+          class="group pointer w-full h-[230px] border border-[#424530] flex justify-center items-center bg-[url('/imgs/projekter/karrusel.webp')] xl:bg-none hover:bg-[url('/imgs/projekter/karrusel.webp')] bg-cover bg-no-repeat bg-left"
+        >
+          <h3 class="group-hover:hidden hidden xl:block">Karrusel Festival</h3>
+        </a>
+      </div>
       <!-- Portfolio -->
-      <a
-        href="https://linekofod-portfolio.netlify.app/"
-        target="_blank"
-        class="group pointer w-full h-[222px] border border-[#424530] flex justify-center items-center hover:bg-[url('/imgs/projekter/portfolio.webp')] bg-cover bg-no-repeat"
-      >
-        <h3 class="group-hover:hidden">Portfolio</h3>
-      </a>
+      <div>
+        <h3 class="mb-1 xl:hidden">Portfolio</h3>
+        <a
+          href="https://linekofod-portfolio.netlify.app/"
+          target="_blank"
+          class="group pointer w-full h-[230px] border border-[#424530] flex justify-center items-center bg-[url('/imgs/projekter/portfolio.webp')] xl:bg-none hover:bg-[url('/imgs/projekter/portfolio.webp')] bg-cover bg-no-repeat bg-left"
+        >
+          <h3 class="group-hover:hidden hidden xl:block">Portfolio</h3>
+        </a>
+      </div>
       <!-- Banana Shake -->
-      <a
-        href="https://linekofod-spil.netlify.app/"
-        target="_blank"
-        class="group pointer w-full h-[222px] border border-[#424530] flex justify-center items-center hover:bg-[url('/imgs/projekter/banana_shake.webp')] bg-cover bg-no-repeat"
-      >
-        <h3 class="group-hover:hidden">Banana Shake</h3>
-      </a>
+      <div>
+        <h3 class="mb-1 xl:hidden">Banana Shake</h3>
+        <a
+          href="https://linekofod-spil.netlify.app/"
+          target="_blank"
+          class="group pointer w-full h-[230px] border border-[#424530] flex justify-center items-center bg-[url('/imgs/projekter/banana_shake.webp')] xl:bg-none hover:bg-[url('/imgs/projekter/banana_shake.webp')] bg-cover bg-no-repeat bg-left"
+        >
+          <h3 class="group-hover:hidden hidden xl:block">Banana Shake</h3>
+        </a>
+      </div>
       <!-- Strikkeguide -->
-      <a
-        href="https://linekofod-strikkeguide.netlify.app/"
-        target="_blank"
-        class="group pointer w-full h-[222px] border border-[#424530] flex justify-center items-center hover:bg-[url('/imgs/projekter/strikkeguide.webp')] bg-cover bg-no-repeat"
-      >
-        <h3 class="group-hover:hidden">Strikkeguide</h3>
-      </a>
+      <div>
+        <h3 class="mb-1 xl:hidden">Strikkeguide</h3>
+        <a
+          href="https://linekofod-strikkeguide.netlify.app/"
+          target="_blank"
+          class="group pointer w-full h-[230px] border border-[#424530] flex justify-center items-center bg-[url('/imgs/projekter/strikkeguide.webp')] xl:bg-none hover:bg-[url('/imgs/projekter/strikkeguide.webp')] bg-cover bg-no-repeat bg-left"
+        >
+          <h3 class="group-hover:hidden hidden xl:block">Strikkeguide</h3>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Studiejob -->
   <section
-    class="grid grid-cols-2 items-center justify-items-center mr-10 ml-20 mb-20"
+    class="lg:grid grid-cols-2 gap-10 xl:gap-0 items-start xl:items-center justify-items-center ml-10 mr-10 lg:mr-20 mb-14 lg:mb-20"
   >
     <div>
       <!-- Studiejob -->
@@ -271,15 +301,16 @@ import Link from "../components/Link.astro";
       </div>
 
       <!-- Kontakt mig -->
-      <div>
+      <div class="mb-10 lg:mb-0">
         <div class="h2">
           <h2>Kontakt mig</h2>
           <span class="gul_border"></span>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-3 lg:gap-6">
           <!-- Email -->
           <div class="flex flex-row gap-3 items-center">
             <svg
+              class="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11"
               xmlns="http://www.w3.org/2000/svg"
               width="40"
               height="31"
@@ -296,6 +327,7 @@ import Link from "../components/Link.astro";
           <!-- Telefon -->
           <div class="flex flex-row gap-3 items-center">
             <svg
+              class="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11"
               xmlns="http://www.w3.org/2000/svg"
               width="35"
               height="36"
@@ -306,14 +338,13 @@ import Link from "../components/Link.astro";
                 d="M11.2725 1.83699C10.7461 0.565506 9.3584 -0.111252 8.03223 0.251053L2.0166 1.89168C0.827148 2.2198 0 3.29988 0 4.53035C0 21.4425 13.7129 35.1553 30.625 35.1553C31.8555 35.1553 32.9355 34.3282 33.2637 33.1387L34.9043 27.1231C35.2666 25.7969 34.5898 24.4093 33.3184 23.8829L26.7559 21.1485C25.6416 20.6837 24.3496 21.005 23.5908 21.9415L20.8291 25.3116C16.0166 23.0352 12.1201 19.1387 9.84375 14.3262L13.2139 11.5714C14.1504 10.8057 14.4717 9.52058 14.0068 8.40633L11.2725 1.84383V1.83699Z"
                 fill="#252423"></path>
             </svg>
-            <Link href="/" target="_self"
-              ><p class="text-3xl">40 48 18 88</p>
-            </Link>
+            <Link href="/" target="_self">40 48 18 88</Link>
           </div>
 
           <!-- LinkedIn -->
           <div class="flex flex-row gap-3 items-center">
             <svg
+              class="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11"
               xmlns="http://www.w3.org/2000/svg"
               width="37"
               height="38"
@@ -326,14 +357,14 @@ import Link from "../components/Link.astro";
             </svg>
             <Link
               href="https://www.linkedin.com/in/line-kofod-thomsen-87408828a/"
-              ><p class="text-3xl">LinkedIn</p>
-            </Link>
+              >LinkedIn</Link
+            >
           </div>
         </div>
       </div>
     </div>
     <img
-      class="shadow-[30px_30px_12px_#4245304D] max-w-lg"
+      class="shadow-[30px_30px_12px_#4245304D] xl:max-w-lg"
       src="/imgs/line2.webp"
       alt="Portrætfoto af Line Kofod Thomsen"
     />
