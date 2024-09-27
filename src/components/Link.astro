@@ -1,0 +1,38 @@
+---
+import "../styles/generel.css";
+
+// Henter parametrene fra Astro.props
+const {
+  href = "#",
+  target = "_blank",
+  variant = "primary",
+  icon,
+} = Astro.props;
+
+const linkStyling = "";
+
+const variantClasses = {
+  primary: "hover:text-[#fcf0d7]",
+};
+---
+
+<a
+  href={href}
+  target={target}
+  class:list={[linkStyling, variantClasses[variant]]}
+  class="w-fit"
+>
+  <span {icon}></span>
+  <slot />
+</a>
+
+<style>
+  .mail::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f0e0";
+    display: inline-block;
+    font-weight: 900;
+    color: #252423;
+    font-size: 40px;
+  }
+</style>
