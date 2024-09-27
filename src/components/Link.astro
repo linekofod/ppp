@@ -2,17 +2,12 @@
 import "../styles/generel.css";
 
 // Henter parametrene fra Astro.props
-const {
-  href = "#",
-  target = "_blank",
-  variant = "primary",
-  icon,
-} = Astro.props;
+const { href = "#", target = "_blank", variant = "primary" } = Astro.props;
 
-const linkStyling = "";
+const linkStyling = "text-[#252423] font-['cormorant'] text-3xl";
 
 const variantClasses = {
-  primary: "hover:text-[#fcf0d7]",
+  primary: "hover:drop-shadow",
 };
 ---
 
@@ -20,19 +15,16 @@ const variantClasses = {
   href={href}
   target={target}
   class:list={[linkStyling, variantClasses[variant]]}
-  class="w-fit"
+  class="w-fit"><slot /></a
 >
-  <span {icon}></span>
-  <slot />
-</a>
 
 <style>
-  .mail::before {
+  /* .mail::before {
     font-family: "Font Awesome 6 Free";
     content: "\f0e0";
     display: inline-block;
     font-weight: 900;
     color: #252423;
     font-size: 40px;
-  }
+  } */
 </style>
